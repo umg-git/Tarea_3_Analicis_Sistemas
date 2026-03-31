@@ -8,30 +8,30 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="card">
+    <div>
+        <div>
             <h2>Identificación de Usuario</h2>
-            <div class="person-selector">
+            <div>
                 <label>Selecciona o crea tu usuario:</label> <br>
                 <select id="userSelect">
                     <option value="">-- Seleccionar usuario --</option>
                 </select>
-                <button class="btn-small" onclick="crearUsuario()">+ Nuevo Usuario</button>
+                <button onclick="crearUsuario()">+ Nuevo Usuario</button>
             </div>
             <div id="userInfo" style="margin-top: 10px; color: #667eea;"></div>
         </div>
 
-        <div class="card">
+        <div>
             <h2> Cifrar y Almacenar Texto</h2>
             <div class="form-group">
                 <label>Texto a cifrar:</label> <br>
-                <input id="plainText" placeholder="Ingresa el texto que deseas cifrar..."></input>
+                <input type="text" id="plainText" placeholder="Ingresa el texto que deseas cifrar..."></input>
             </div>
             <button onclick="cifrarYAlmacenar()">Cifrar y Generar Token</button>
             <div id="tokenResult" class="token-box" style="display: none;"></div>
         </div>
 
-        <div class="card">
+        <div>
             <h2>Descifrar por Token</h2>
             <div class="form-group">
                 <label>Ingresa el token:</label> <br>
@@ -41,8 +41,8 @@
             <div id="decryptResult" style="margin-top: 15px;"></div>
         </div>
 
-        <div class="card">
-            <h2> Historial de Intentos</h2>
+        <div>
+            <h2> Historial</h2>
             <div id="historyTable">
                 <table>
                     <thead>
