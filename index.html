@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cifrador de Texto con Tokens</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Identificación de Usuario</h2>
+            <div class="person-selector">
+                <label>Selecciona o crea tu usuario:</label> <br>
+                <select id="userSelect">
+                    <option value="">-- Seleccionar usuario --</option>
+                </select>
+                <button class="btn-small" onclick="crearUsuario()">+ Nuevo Usuario</button>
+            </div>
+            <div id="userInfo" style="margin-top: 10px; color: #667eea;"></div>
+        </div>
+
+        <div class="card">
+            <h2> Cifrar y Almacenar Texto</h2>
+            <div class="form-group">
+                <label>Texto a cifrar:</label> <br>
+                <input id="plainText" placeholder="Ingresa el texto que deseas cifrar..."></input>
+            </div>
+            <button onclick="cifrarYAlmacenar()">Cifrar y Generar Token</button>
+            <div id="tokenResult" class="token-box" style="display: none;"></div>
+        </div>
+
+        <div class="card">
+            <h2>Descifrar por Token</h2>
+            <div class="form-group">
+                <label>Ingresa el token:</label> <br>
+                <input type="text" id="tokenInput" placeholder="Ej: 1234567890">
+            </div>
+            <button onclick="descifrarPorToken()">Visualizar Texto</button>
+            <div id="decryptResult" style="margin-top: 15px;"></div>
+        </div>
+
+        <div class="card">
+            <h2> Historial de Intentos</h2>
+            <div id="historyTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Texto Original</th>
+                            <th>Fecha y Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td colspan="4" style="text-align: center;">Selecciona un usuario para ver su historial</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
